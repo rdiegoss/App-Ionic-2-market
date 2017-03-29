@@ -1,0 +1,34 @@
+<ion-header>
+
+  <ion-toolbar>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">
+        <span ion-text>Fechar</span>
+      </button>
+    </ion-buttons>
+
+    <ion-title>
+      Serviços
+    </ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+
+  <ion-list mode="wp">
+    <ion-item *ngFor="let item of services">
+      <ion-label>{{ item.title }}</ion-label>
+      <ion-checkbox secondary ngControl="item" [(ngModel)]="item['checked']"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
+
+<ion-footer padding clear>
+
+  <ion-toolbar>
+    <button ion-button color="secondary" full (click)="dismiss(services)">Confirmar</button>
+  </ion-toolbar>
+
+</ion-footer>

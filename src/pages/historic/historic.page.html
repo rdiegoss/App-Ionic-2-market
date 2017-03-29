@@ -1,0 +1,22 @@
+<ion-header>
+  <app-header titlePage="{{title}}"></app-header>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+
+    <ion-item-group *ngFor="let month of historic">
+      <ion-item-divider>{{ month.date }}</ion-item-divider>
+
+      <ion-item *ngFor="let item of month.data">
+        <span>Data: {{ item.date }}</span>
+        <span>Horário: {{ item.hour }}</span>
+        <span>Unidade: {{ item.city }}/{{ item.unit }}</span>
+        <span>Compras: {{ item.compras }}</span>
+      </ion-item>
+    </ion-item-group>
+
+  </ion-list>
+
+</ion-content>

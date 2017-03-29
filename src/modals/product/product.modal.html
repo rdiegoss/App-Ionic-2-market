@@ -1,0 +1,16 @@
+<ion-card>
+  <img [src]="product.img" [alt]="product.name"/>
+
+  <ion-card-content>
+    <h2>{{ product.name }}</h2>
+    <p>{{ product.text }}</p>
+  </ion-card-content>
+
+  <ion-item>
+    <a ion-button [href]="product.link" color="secondary" large full>Comprar</a>
+  </ion-item>
+
+  <button ion-button class="btn-close" (click)="dismiss()" only-icon clear>
+    <ion-icon name="close-circle" color="secondary"></ion-icon>
+  </button>
+</ion-card>

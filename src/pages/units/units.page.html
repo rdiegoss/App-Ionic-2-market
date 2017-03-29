@@ -1,0 +1,60 @@
+<ion-header>
+  <app-header titlePage="{{title}}"></app-header>
+</ion-header>
+
+<ion-content>
+
+  <div class="header-search" padding>
+    <ion-item>
+      <ion-label>
+        <ion-icon name="search"></ion-icon>
+      </ion-label>
+      <ion-input type="search" placeholder="Buscar"></ion-input>
+    </ion-item>
+  </div>
+
+  <ion-list>
+    <ion-item>
+      <ion-label>Selecione um País</ion-label>
+      <ion-select cancelText="Fechar" okText="Selecionar">
+        <ion-option value="Brasil">Brasil</ion-option>
+        <ion-option value="USA">USA</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Estado</ion-label>
+      <ion-select cancelText="Fechar" okText="Selecionar">
+        <ion-option value="Ceara">Ceará</ion-option>
+        <ion-option value="São Paulo">São Paulo</ion-option>
+        <ion-option value="Rio de Janeiro">Rio de Janeiro</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Cidade</ion-label>
+      <ion-select cancelText="Fechar" okText="Selecionar">
+        <ion-option value="Fortaleza">Fortaleza</ion-option>
+        <ion-option value="Juazeiro do Norte">Juazeiro do Norte</ion-option>
+        <ion-option value="Itapiúna">Itapiúna</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Unidade</ion-label>
+      <ion-select cancelText="Fechar" okText="Selecionar">
+        <ion-option value="Matrix">Matriz</ion-option>
+        <ion-option value="Shopping Rio Mar">Shopping Rio Mar</ion-option>
+        <ion-option value="Maraponga">Maraponga</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item item-right>
+      <button ion-button clear item-right icon-right color="secondary" (click)="openUnit()">
+        Avançar
+        <ion-icon ios="md-arrow-dropright" md="md-arrow-dropright"></ion-icon>
+      </button>
+    </ion-item>
+  </ion-list>
+
+ </ion-content>

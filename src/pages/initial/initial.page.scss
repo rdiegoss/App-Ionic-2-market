@@ -1,0 +1,185 @@
+initial {
+
+  ion-content {
+    &::before {
+      background: url('../assets/images/background_initial.jpg');
+      background-position-x: 10%;
+      background-size: auto 100%;
+      animation: bgAnimate 60s infinite linear;
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      filter: blur(4px);
+      z-index: 0;
+    }
+
+    .scroll-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    &.form-active {
+      .scroll-content {
+        justify-content: flex-start;
+        margin-bottom: 0 !important;
+      }
+
+      .slides {
+        display: none;
+      }
+
+      .login-content {
+        display: block;
+      }
+    }
+  }
+
+  .header-initial {
+    padding: 50px 0;
+    text-align: center;
+
+    .logo {
+      width: 117%;
+      max-width: 708px;
+    }
+
+    .buttons {
+      margin-top: 20px;
+
+      button {
+        width: 30px;
+        height: 30px;
+        border-radius: 30px;
+        line-height: 0;
+        background-color: $color-primary;
+        color: #FFFFFF;
+        margin: 0 10px;
+
+        &.active {
+          color: rgba(#FFFFFF, .5);
+        }
+      }
+    }
+  }
+
+  .slides {
+    height: 40%;
+    margin-bottom: 30px;
+
+    .swiper-container {
+      ion-slide {
+        font-size: 16px;
+        padding: 0 15px;
+      }
+
+      .swiper-pagination {
+        .swiper-pagination-bullet {
+          background: $color-primary;
+          &.swiper-pagination-bullet-active {
+            border-color: $color-primary;
+          }
+        }
+      }
+    }
+  }
+
+  .login-content {
+    display: none;
+    width: 100%;
+    position: relative;
+    padding: 0 30px;
+    text-align: center;
+
+    form {
+      transition: all 250ms ease;
+    }
+
+    &.content-form_register {
+      .form-login { transform: translateX(-130%); }
+      .form-register { transform: translateX(0); }
+    }
+
+    .form-register {
+      position: absolute;
+      top: 0;
+      left: 30px;
+      width: calc(100% - 60px);
+      transform: translateX(130%);
+      text-align: left;
+
+      strong {
+        display: block;
+        text-align: center;
+        margin-bottom: 15px;
+      }
+    }
+
+    .label-email {
+      position: relative;
+      display: block;
+
+      .spinner {
+        position: absolute;
+        top: 50%;
+        right: 5px;
+        transform: translateY(-50%);
+      }
+    }
+
+    .input {
+      border: 2px solid $color-primary;
+      border-radius: 3px;
+      padding: 5px 35px 5px 10px;
+      margin-bottom: 15px;
+
+      input {
+        &::-webkit-input-placeholder {
+          color: $color-primary;
+        }
+
+        &:-ms-input-placeholder {
+          color: $color-primary;
+        }
+      }
+    }
+
+    button {
+      border-radius: 3px;
+    }
+  }
+
+  .footer {
+    &::before {
+      display: none;
+    }
+
+    ion-row {
+      padding: 0 5px;
+    }
+
+    .button-full {
+      border-width: 1px;
+      border-radius: 3px;
+    }
+  }
+
+}
+
+@keyframes bgAnimate {
+  0% {
+    background-position-x: 0;
+    transform: scale(1.3);
+  }
+  50% {
+    background-position-x: 100%;
+    transform: scale(1);
+  }
+  100% {
+    background-position-x: 0;
+    transform: scale(1.3);
+  }
+}

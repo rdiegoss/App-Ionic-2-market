@@ -1,0 +1,73 @@
+collapse {
+  display: block;
+
+  .collapse-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333333;
+    background-size: cover;
+    color: #FFFFFF;
+    padding: 20px 15px;
+    font-weight: 500;
+    span {
+      letter-spacing: .5px;
+    }
+    ion-icon {
+      font-size: 1.5em;
+      height: 19px;
+      transition: all 250ms ease;
+    }
+
+    &.active {
+      ion-icon {
+        transform: rotate(180deg);
+      }
+
+      & + .collapse-body {
+        display: block;
+      }
+    }
+  }
+
+  .collapse-body {
+    display: none;
+
+    .items {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+
+      .card {
+        max-width: calc(50% - 10px);
+        margin: 5px;
+
+        ion-item {
+          text-transform: uppercase;
+          font-size: 1em;
+        }
+      }
+    }
+
+  }
+
+  & + collapse {
+    margin-top: 10px;
+  }
+}
+
+
+// iOS
+.ios {
+  collapse {
+    .collapse-body {
+      .items {
+        flex-direction: column;
+        .card {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}

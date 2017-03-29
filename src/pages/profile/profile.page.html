@@ -1,0 +1,53 @@
+<ion-header>
+  <app-header titlePage="{{title}}"></app-header>
+</ion-header>
+
+<ion-content>
+
+  <div class="change-thumb">
+    <figure>
+      <img [src]="user.picture" alt="">
+      <button ion-fab color="secondary">
+        <ion-icon name="camera"></ion-icon>
+      </button>
+    </figure>
+  </div>
+
+  <ion-list>
+
+    <ion-item [attr.data-disabled]="disabled.name ? 'true' : 'false'">
+      <ion-label stacked>Nome:
+        <button ion-button clear (click)="toggleEdit('name')">
+          <ion-icon [name]="disabled.name ? 'create' : 'checkmark'" [class]="'icon ion-md-' + (disabled.name ? 'create' : 'checkmark')"></ion-icon>
+        </button>
+      </ion-label>
+      <ion-input type="text" name="name" [value]="user.name"></ion-input>
+    </ion-item>
+
+    <ion-item data-disabled="true">
+      <ion-label stacked>Cliente desde:</ion-label>
+      <ion-input type="text" name="client_at" [value]="user.client_at"></ion-input>
+    </ion-item>
+
+    <ion-item data-disabled="true">
+      <ion-label stacked>Aniversário:</ion-label>
+      <ion-input type="text" name="birthday" [value]="user.birthday"></ion-input>
+    </ion-item>
+
+    <ion-item [attr.data-disabled]="disabled.language ? 'true' : 'false'">
+      <ion-label stacked>Idioma:
+        <button ion-button clear (click)="toggleEdit('language')">
+          <ion-icon [name]="disabled.language ? 'create' : 'checkmark'" [class]="'icon ion-md-' + (disabled.language ? 'create' : 'checkmark')"></ion-icon>
+        </button>
+      </ion-label>
+      <ion-input type="text" name="language" [value]="user.language"></ion-input>
+    </ion-item>
+
+    <button ion-item clear icon-right full (click)="openHistoric()">
+      Histórico do cliente
+      <ion-icon ios="md-arrow-dropright" md="md-arrow-dropright"></ion-icon>
+    </button>
+
+  </ion-list>
+
+</ion-content>

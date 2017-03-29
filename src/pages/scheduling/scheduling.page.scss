@@ -1,0 +1,72 @@
+scheduling {
+
+  .title-content {
+    h3 {
+      font-size: 1.2em;
+      margin: 10px 0 !important;
+    }
+  }
+
+  .list {
+    .item {
+      background: transparent;
+      border-bottom: 1px solid rgba($color-grayMedium, .3);
+
+      .item-inner {
+        border: none;
+      }
+
+      .input-wrapper {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 10px 0;
+
+        .label {
+          width: 100%;
+          text-align: left;
+          margin: 0 0 5px;
+          font-weight: 500;
+          color: $color-primary;
+
+          p {
+            font-size: .9em;
+            font-weight: 400;
+            color: $color-grayMedium;
+            padding-top: 5px;
+          }
+        }
+
+        .datetime {
+          width: 100%;
+          padding: 0;
+          .datetime-text {
+            color: $color-grayMedium;
+            font-size: .9em;
+            min-height: inherit;
+            border: none;
+          }
+        }
+      }
+
+      &:last-child {
+        .label {
+          white-space: inherit;
+        }
+      }
+    }
+  }
+
+  .footer {
+    &::before {
+      display: none;
+    }
+    
+    .toolbar {
+      .toolbar-background {
+        display: none;
+      }
+    }
+  }
+
+}

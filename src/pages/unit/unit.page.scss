@@ -1,0 +1,21 @@
+unit {
+  .map-unit {
+    display: block;
+    width: 100%;
+  }
+
+  .info {
+    h2 {
+      text-transform: uppercase;
+      font-size: 1.2em;
+    }
+    p {
+      color: $color-grayDark;
+    }
+    .button {
+      padding: 15px 0;
+      text-transform: uppercase;
+      font-size: 1em;
+    }
+  }
+}

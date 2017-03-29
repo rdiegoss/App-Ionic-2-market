@@ -1,0 +1,41 @@
+<ion-card class="status-card card-md {{status}}">
+  <span class="icon-schedule">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51.5 60.8">
+      <path class="calendar-st0" d="M.7 18.7h42.7v30.7H.7z"/>
+      <path class="calendar-st1" d="M35.6 2.6C35.6 1.2 34.4 0 33 0c-1.5 0-2.6 1.2-2.6 2.6V11c0 1.5 1.2 2.6 2.6 2.6 1.5 0 2.6-1.2 2.6-2.6V2.6z"/>
+      <path class="calendar-st2" d="M8.2 23.2h6.2v4.6H8.2zM19.2 23.2h6.2v4.6h-6.2zM29.6 23.2h6.2v4.6h-6.2zM8.2 31.2h6.2v4.6H8.2zM19.2 31.2h6.2v4.6h-6.2z"/>
+      <path class="calendar-st3" d="M29.6 31.2h6.2v4.6h-6.2z"/>
+      <path class="calendar-st2" d="M8.2 39.1h6.2v4.6H8.2zM19.2 39.1h6.2v4.6h-6.2zM29.6 39.1h6.2v4.6h-6.2z"/>
+      <path class="calendar-st1" d="M11.1 0C9.6 0 8.5 1.2 8.5 2.6V11c0 1.5 1.2 2.6 2.6 2.6 1.5 0 2.6-1.2 2.6-2.6V2.6c0-1.4-1.2-2.6-2.6-2.6z"/>
+      <g>
+        <path class="calendar-st3" d="M43.4 7.4h-6v3.5c0 2.4-1.9 4.4-4.3 4.4s-4.4-1.9-4.4-4.4V7.4H15.5v3.5c0 2.4-1.9 4.4-4.3 4.4s-4.4-1.9-4.4-4.4V7.4h-6v11.3h42.7V7.4z"/>
+      </g>
+
+      <g class="icon-status icon-canceled">
+        <circle class="icon-st4" cx="37.9" cy="47.8" r="11.6"/>
+        <path class="icon-st5" d="M32.8 42.7L43.1 53M32.8 53l10.3-10.3"/>
+      </g>
+
+      <g class="icon-status icon-approved">
+        <g>
+          <circle class="icon-st4" cx="38.6" cy="48" r="11.6"/>
+        </g>
+        <path class="icon-st5" d="M32.5 47.7l4.3 4.7 7.8-8.8"/>
+      </g>
+
+      <g class="icon-status icon-inApproval">
+        <circle class="icon-st3" cx="38.5" cy="47.8" r="11.6"/>
+        <circle class="icon-st4" cx="38.5" cy="47.8" r="6.7"/>
+        <path class="icon-st4" d="M38.5 42.9v4.9l2.3 2.7"/>
+      </g>
+
+    </svg>
+  </span>
+  <ion-item>
+    <div class="message-scheduled">
+      <p>{{message}}</p>
+      <p>{{about}}</p>
+      <button ion-button class="btn-to_action" color="secondary" clear>Agendar agora</button>
+    </div>
+  </ion-item>
+</ion-card>

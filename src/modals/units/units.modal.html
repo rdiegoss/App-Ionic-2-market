@@ -1,0 +1,39 @@
+<ion-header>
+
+  <ion-toolbar>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">
+        <span ion-text>Fechar</span>
+      </button>
+    </ion-buttons>
+
+    <ion-title>
+      Unidades
+    </ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+
+  <div class="header-search" padding>
+    <ion-item>
+      <ion-label>
+        <ion-icon name="search"></ion-icon>
+      </ion-label>
+      <ion-input type="search" placeholder="Buscar" [(ngModel)]="inputFilter"></ion-input>
+    </ion-item>
+  </div>
+
+  <ion-list mode="wp">
+    <ion-item *ngFor="let item of units | filter: [inputFilter, ['name', 'address', 'city', 'phone']]" (click)="dismiss(item)">
+      <h2>{{ item.name }}</h2>
+      <p>
+        {{ item.address }} <br>
+        {{ item.city }}<br>
+        {{ item.phone }}
+      </p>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

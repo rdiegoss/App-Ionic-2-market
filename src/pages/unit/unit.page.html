@@ -1,0 +1,22 @@
+<ion-header>
+  <app-header titlePage="{{title}}"></app-header>
+</ion-header>
+
+<ion-content>
+
+  <div class="map-unit">
+    <img src="https://maps.googleapis.com/maps/api/staticmap?size=600x400&maptype=roadmap\&markers=size:mid%7Ccolor:red%7CRua%20Lidia%20Brigido,%2055&zoom=16" alt="">
+  </div>
+
+  <div class="info" padding>
+    <h2>Matriz</h2>
+    <p>Rua Silva Paulet, 1390 - Fortaleza, CE <br>
+     Fortaleza <br>
+    (85) 3051-1220</p>
+
+    <button ion-button clear color="secondary" (click)="goBack()">
+      Ver outras unidades
+    </button>
+  </div>
+
+</ion-content>

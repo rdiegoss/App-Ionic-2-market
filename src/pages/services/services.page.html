@@ -1,0 +1,19 @@
+<ion-header>
+  <app-header titlePage="{{title}}"></app-header>
+</ion-header>
+
+<ion-content>
+  <ion-slides pager>
+
+    <ion-slide *ngFor="let item of services">
+      <header class="slide-header">
+        <img [src]="item.cover" alt="">
+        <h2>{{ item.title }}</h2>
+      </header>
+      <div class="slide-body">
+        <h2>{{ item.text }}</h2>
+      </div>
+    </ion-slide>
+
+  </ion-slides>
+</ion-content>

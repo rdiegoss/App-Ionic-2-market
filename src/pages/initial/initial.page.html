@@ -1,0 +1,50 @@
+<ion-content [class]="isLogin ? 'form-active' : ''">
+
+  <header class="header-initial">
+    <img class="logo" src="assets/images/logo.png" alt="">
+  </header>
+
+  <ion-slides pager>
+    <ion-slide *ngFor="let item of slides">
+      <h4>{{ item.title }}</h4>
+      <p>{{ item.text }}</p>
+    </ion-slide>
+  </ion-slides>
+
+  <div [class]="'login-content ' + formClass">
+    <form class="form-login" [formGroup]="formLogin">
+      <label class="label-email">
+        <ion-input type="email" placeholder="E-mail" formControlName="email" [(ngModel)]="email"></ion-input>
+        <ion-spinner name="crescent" *ngIf="loadingLogin"></ion-spinner>
+      </label>
+
+      <button ion-button color="primary" full (click)="submitLogin()" [disabled]="!formLogin.valid || loadingLogin">Entrar</button>
+      <button ion-button color="primary" small clear (click)="skip()">Pular etapa</button>
+    </form>
+
+    <form class="form-register" [formGroup]="formRegister">
+      <strong>{{ email }}</strong>
+      <ion-input type="text" placeholder="Nome" formControlName="name"></ion-input>
+      <ion-input type="tel" placeholder="Telefone" formControlName="phone" [attr.maxlength]="15" phone-mask></ion-input>
+
+      <button ion-button color="primary" full (click)="submitRegister()" [disabled]="!formRegister.valid">Continuar</button>
+      <button ion-button icon-left small clear (click)="showLogin()">
+        <ion-icon name="arrow-back"></ion-icon>
+        Voltar
+      </button>
+    </form>
+  </div>
+
+</ion-content>
+
+<ion-footer *ngIf="!isLogin" clear>
+  <ion-row>
+    <ion-col width-50>
+      <button ion-button color="primary" full (click)="showLogin()">Já sou cliente</button>
+    </ion-col>
+
+    <ion-col width-50>
+      <button ion-button color="primary" outline full (click)="skip()">Pular</button>
+    </ion-col>
+  </ion-row>
+</ion-footer>

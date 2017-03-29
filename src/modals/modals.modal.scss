@@ -1,0 +1,75 @@
+ion-modal {
+
+  .header-search {
+    border-bottom: 1px solid rgba($color-grayMedium, .3);
+    position: relative;
+
+    .item {
+      background: transparent;
+      border: 1px solid rgba($color-grayMedium, .3);
+      border-radius: 5px;
+      min-height: 1rem;
+
+      .item-inner {
+        border: none;
+
+        .label {
+          color: $color-grayMedium;
+        }
+
+        .label,
+        .text-input {
+          margin: 7px 5px 7px 0;
+          border: none;
+        }
+      }
+    }
+  }
+
+  .list {
+    .item {
+      background: transparent;
+      border-bottom: 1px solid rgba($color-grayMedium, .3);
+
+      .item-inner {
+        border: none;
+      }
+
+      .input-wrapper {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 10px 0;
+
+        .label {
+          width: 100%;
+          text-align: left;
+          margin: 0 0 5px;
+          font-weight: 500;
+        }
+
+        .datetime {
+          width: 100%;
+          padding: 0;
+          color: $color-grayMedium;
+          .datetime-text {
+            min-height: inherit;
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    &::before {
+      display: none;
+    }
+    
+    .toolbar {
+      .toolbar-background {
+        display: none;
+      }
+    }
+  }
+
+}

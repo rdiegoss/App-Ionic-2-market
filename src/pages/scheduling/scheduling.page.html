@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-navbar>
+
+    <button ion-button menuToggle="side-menu">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title class="toolbar-title">{{ title }}</ion-title>
+
+    <ion-buttons end class="nav-notification" menuToggle="side-notifications">
+      <button ion-button icon-only menuToggle="side-notifications">
+        <ion-icon name="notifications"></ion-icon>
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="title-content" padding>
+    <h3 color="secondary">Selecione as opções abaixo:</h3>
+  </div>
+
+  <ion-list mode="ios">
+    <ion-item (click)="showLocationModal()">
+      <ion-icon ios="md-pin" md="md-pin" item-left></ion-icon>
+      <ion-label>
+        Unidade
+        <p *ngIf="dataUnit">
+          <strong>{{ dataUnit.name }}</strong> <br>
+          {{ dataUnit.address }} <br>
+          {{ dataUnit.city +'/'+ dataUnit.state }} <br>
+          {{ dataUnit.phone }}
+        </p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon ios="md-calendar" md="md-calendar" item-left></ion-icon>
+      <ion-label>Data</ion-label>
+      <ion-datetime displayFormat="DD MMMM YYYY" pickerFormat="DD MMM YYYY" min="2017" [(ngModel)]="form.date"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon ios="md-time" md="md-time" item-left></ion-icon>
+      <ion-label>Hora</ion-label>
+      <ion-datetime displayFormat="HH:mm" [(ngModel)]="form.hour"></ion-datetime>
+    </ion-item>
+
+    <ion-item (click)="showServicesModal()">
+      <ion-icon ios="ios-list" md="ios-list" item-left></ion-icon>
+      <ion-label>
+        Serviços
+        <p *ngIf="dataServices">
+          <span *ngFor="let item of dataServicesChecked; let isLast=last">
+            {{ item.title }}{{ isLast ? '' : ', ' }}
+          </span>
+        </p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
+
+<ion-footer padding clear>
+
+  <ion-toolbar>
+    <button ion-button color="secondary" full (click)="onSubmit(form)">Confirmar</button>
+  </ion-toolbar>
+
+</ion-footer>

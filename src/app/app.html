@@ -1,0 +1,33 @@
+<ion-menu [content]="content" side="left" id="side-menu">
+
+  <ion-header>
+    <ion-toolbar>
+      <profile-header menuClose (click)="openPage('profile')"></profile-header>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list class="menu-list_links">
+
+      <span *ngFor="let page of pages">
+        <button menuClose ion-item *ngIf="page.menu" (click)="openPage(page.router)">
+          {{page.title}}
+        </button>
+      </span>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<!--<ion-menu [content]="content" side="right" id="side-notifications">
+  <ion-content>
+    <ion-list class="menu-list_links">
+      <button menuClose ion-item>Notification</button>
+      <button menuClose ion-item>Notification</button>
+      <button menuClose ion-item>Notification</button>
+    </ion-list>
+  </ion-content>
+</ion-menu>-->
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

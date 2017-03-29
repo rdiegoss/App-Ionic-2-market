@@ -1,0 +1,22 @@
+modal-product {
+  background: rgba($color-primary, .8);
+
+  .card {
+    position: relative;
+
+    .card-content {
+      h2 {
+        margin-bottom: 10px;
+      }
+    }
+
+    .btn-close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 35px;
+      padding: 5px;
+      font-size: 2em;
+    }
+  }
+}

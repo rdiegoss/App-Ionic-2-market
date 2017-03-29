@@ -1,0 +1,164 @@
+
+// App
+.ion-page {
+  ion-content {
+    background-color: $color-grayLight;
+  }
+}
+
+// Structure
+.colgroup {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+
+  &.top-space {
+    margin-top: 20px;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: $color-secondary;
+  }
+}
+
+.responsive-col {
+  width: 100%;
+  margin: 0 0 20px;
+  @media(min-width: 340px) {
+    width: calc(100%/2.1);
+    margin: 0;
+  }
+}
+
+// Header
+.toolbar {
+    padding: 0;
+
+    .toolbar-background {
+        background-color: $color-primary;
+    }
+
+    &::after {
+        content: "";
+        display: none;
+    }
+
+    .toolbar-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .bar-button-default {
+        color: #fff;
+        .button-inner {
+            .icon {
+                font-size: 3.2rem;
+            }
+        }
+    }
+
+    .toolbar-content {
+        .title {
+            .toolbar-title {
+                color: #fff;
+            }
+        }
+    }
+}
+
+// Side menu
+ion-menu {
+    .menu-list_links {
+        margin: 0;
+        padding: 0 0 75px;
+
+        .item-block:first-child {
+            border-top: 0 !important;
+        }
+
+        .item {
+            &.item-block {
+                min-height: 0;
+                padding: 15px 0 15px 20px;
+            }
+            .item-inner {
+                border-bottom: 0;
+                background-image: none !important;
+
+                .label {
+                    font-size: 1.5rem;
+                    margin: 0;
+                    font-weight: 500;
+                    color: #333;
+                }
+            }
+            @media(min-width: 375px) {
+                &.item-block {
+                    padding: 17px 0 17px 20px;
+                }
+                .item-inner {
+                    .label {
+                        font-size: 1.7rem;
+                    }
+                }
+            }
+        }
+
+        .link-franchisee {
+            bottom: 0;
+            background-color: #fff;
+            border-top: 1px solid #ccc;
+            display: flex;
+            padding: 17px;
+            position: fixed;
+            text-decoration: none;
+            width: 100%;
+
+            .icon-home {
+                width: 40px;
+                height: 40px;
+                overflow: hidden;
+            }
+
+            .text-btn {
+                display: flex;
+                flex-flow: column;
+                color: $color-secondary;
+                justify-content: center;
+                padding: 0 0 0 10px;
+                @media(min-width: 375px) {
+                    padding: 0 0 0 15px;
+                }
+
+                h2 {
+                    font-size: 1.4rem;
+                    font-weight: 700;
+                    margin: 0 0 5px;
+                    text-transform: uppercase;
+                    @media(min-width: 375px) {
+                        font-size: 1.6rem;
+                    }
+                }
+                p {
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+ion-app.ios,
+ion-app.md,
+ion-app.wp {
+  [padding] {
+    padding: 10px;
+
+    .scroll-content {
+      padding: 10px;
+    }
+  }
+}

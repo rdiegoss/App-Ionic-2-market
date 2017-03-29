@@ -1,0 +1,43 @@
+historic {
+  .list {
+    .item {
+      background: transparent;
+      .item-inner {
+        border: none;
+      }
+
+      &.item-divider {
+        font-weight: 600;
+        font-size: 1.2em;
+        color: $color-primary;
+        border-bottom: .5px solid rgba($color-grayMedium, .5);
+      }
+
+      .input-wrapper {
+        border-bottom: .5px solid rgba($color-grayMedium, .5);
+
+        span {
+          display: block;
+          font-size: .8em;
+          color: $color-grayDark;
+
+          & + span {
+            margin-top: 5px;
+          }
+
+          &:last-child {
+            white-space: normal;
+          }
+        }
+      }
+
+      &.item-divider,
+      &:last-child {
+        .input-wrapper {
+          border: none;
+        }
+      }
+
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.slides {
+  .swiper-container {
+    .swiper-pagination {
+      .swiper-pagination-bullet {
+        background: $color-secondary;
+        border: 2px solid transparent;
+        opacity: 1;
+        &.swiper-pagination-bullet-active {
+          background: transparent;
+          border-color: $color-secondary;
+        }
+      }
+    }
+  }
+}
