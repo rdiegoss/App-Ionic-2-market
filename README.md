@@ -1,22 +1,34 @@
-Levissima Mobile
+Levissima Mobile (App Market)
 =====================
 
 
-## Inicializando o Projeto:
-Certifique-se de ter instalado as principais dependências:
+## Installation:
+Install dependencies project
 - [NodeJS](https://nodejs.org/en/download/)
 
-Seguindo o uso do Ionic:
+Install Ionic:
 
 ```bash
-# Execute o seguinte comando para realizar a instalação Global do Framework na sua máquina:
+# Command to install Ionic FrameWork:
 $ npm install -g cordova ionic
 
-# Execute o seguinte comando:
+# Exec command to install dependecies
 $ npm i
 
-# Finalmente, execute o comando:
+# Run
 $ ionic serve
 
-# Abra seu navegador favorito no diretório |localhost:8100|.
+# Open in your browser |localhost:8100|.
 ```
+
+## Screens:
+
+[![ScreenShot2017-03-29at12.02.04.png](http://ap.imagensbrasil.org/images/2017/03/29/ScreenShot2017-03-29at12.02.04.png)](http://ap.imagensbrasil.org/image/jnXZQs)
+![ScreenShot2017-03-29at11.55.46.png](http://ap.imagensbrasil.org/images/2017/03/29/ScreenShot2017-03-29at11.55.46.png)
+![ScreenShot2017-03-29at11.55.51.png](http://ap.imagensbrasil.org/images/2017/03/29/ScreenShot2017-03-29at11.55.51.png)
+
+## TODO's:
+
+* Chat 
+* Back-End
+
